@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:14:31 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/09 19:48:51 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/09 19:52:24 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Contact
 		std::string Nickname;
 		unsigned long PhoneNumber;
 		std::string DarkestSecret;
-		bool oldest;
+		bool oldest = false;
 	public:
 		Contact();
 }
