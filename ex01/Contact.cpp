@@ -6,48 +6,34 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:36:18 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/09 19:48:43 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/10 18:02:35 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.h"
 
-Contact()
-{
-	FirstName = NULL;
-	LastName = NULL;
-	Nickname = NULL;
-	PhoneNumber = 0;
-	DarkestSecret = NULL;
-	oldest = false;
-}
+// Setters
+void Contact::SetFirstName(std::string const fn) { Firstname = fn; }
 
-Contact::SetFirstName(std::string fn)
-{
-	Firstname = fn;
-}
+void Contact::SetLastName(std::string const ln) { LastName = ln; }
 
-Contact::SetLastName(std::string ln)
-{
-	LastName = ln;
-}
+void Contact::SetNickname(std::string const nick) { Nickname = nick; }
 
-Contact::SetNickname(std::string nick)
-{
-	Nickname = nick;
-}
+void Contact::SetPhoneNumber(unsigned long const pn) { PhoneNumber = pn; }
 
-Contact::SetPhoneNumber(unsigned long pn)
-{
-	PhoneNumber = pn;
-}
+void Contact::SetDarkestSecret(std::string const ds) { DarkestSecret = ds; }
 
-Contact::SetDarkestSecret(std::string ds)
-{
-	DarkestSecret = ds;
-}
+void Contact::SetOldest(bool const old) { oldest = old; }
 
-Contact::SetOldest(bool old)
-{
-	oldest = old;
-}
+//Getters
+const std::string Contact::GetFirstName() { return(FirstName); }
+
+const std::string Contact::GetLastName() { return(LastName); }
+
+const std::string Contact::GetNickname() { return(Nickname); }
+
+const std::string Contact::GetPhoneNumber() { return(PhoneNumber); }
+
+const std::string Contact::GetDarkestSecret() { return(DarkestSecret); }
+
+const std::string Contact::GetOldest() { return(oldest); }
