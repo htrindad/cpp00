@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:36:18 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/10 18:02:35 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/11 15:40:42 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void Contact::SetLastName(std::string const ln) { LastName = ln; }
 
 void Contact::SetNickname(std::string const nick) { Nickname = nick; }
 
-void Contact::SetPhoneNumber(unsigned long const pn) { PhoneNumber = pn; }
+void Contact::SetPhoneNumber(std::string const pn) { PhoneNumber = pn; }
 
 void Contact::SetDarkestSecret(std::string const ds) { DarkestSecret = ds; }
 
