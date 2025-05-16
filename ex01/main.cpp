@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 17:29:35 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/12 20:02:48 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/16 20:17:12 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ static std::string inp(std::string prompt)
 	{
 		std::cout << prompt;
 		std::getline(std::cin, input);
+		if (std::cin.eof())
+		{
+			std::cout << '\n';
+			exit(0);
+		}
 		if (!input.empty())
 			break ;
 		std::cout << " >> This field cannot be empty. Please try again.\n";
@@ -35,6 +40,11 @@ static bool ind(PhoneBook pb)
 	pb.DisplayList();
 	std::cout << "Input the index to view details (or press enter to cancel)> ";
 	std::getline(std::cin, inp);
+	if (std::cin.eof())
+	{
+		std::cout << '\n';
+		exit(0);
+	}
 	if (inp.empty())
 		return true;
 	index = std::atoi(inp.c_str());
@@ -85,12 +95,16 @@ int main()
 	while (1)
 	{
 		std::cout << "PhoneBook> ";
-		std::cin >> command;
-		std::cin.ignore();
+		std::getline(std::cin, command);
 		if (std::cin.eof())
 		{
 			std::cout << '\n';
-			break ;
+			exit(0);
+		}
+		if (command.empty())
+		{
+			std::cout << "This field cannot be empty. Try again.\n";
+			continue ;
 		}
 		if (check(command, pb))
 			break ;

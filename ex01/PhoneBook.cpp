@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 15:44:20 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/12 19:54:29 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/16 19:57:01 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void PhoneBook::DisplayList()
 	for (int i = 0; i < size(); i++)
 	{
 		Contact &cont = c[i];
+		if (cont.GetFirstName().empty())
+			break ;
 		std::cout
 			<< std::setw(10) << i+1 << '|'
 			<< std::setw(10) << t10(cont.GetFirstName()) << '|'
