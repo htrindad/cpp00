@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 20:28:18 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/16 20:41:19 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/05/17 18:15:19 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 // CnD
 
-Account::Acount(int initialDeposit)
+Account::Account() {};
+
+Account::Account(int initialDeposit)
 {
-	makeDepoist(initialDeposit);
+	makeDeposit(initialDeposit);
 }
 
 Acocunt::~Account() {};
@@ -42,12 +44,25 @@ int Account::checkAmount() const
 	return _amount;
 }
 
-int Account::getTotalAmount()
+static int Account::getTotalAmount()
 {
 	return _amount;
 }
 
-int Account::getNbDeposits()
+static int Account::getNbDeposits()
 {
-	return _nbDeposits
+	return _nbDeposits;
+}
+
+static int Account::getNbAccounts()
+{
+	return _accountIndex;
+}
+
+static void Account::displayAccountsInfos()
+{
+	std::cout
+		<< "Account Number: " << getNbAccounts() << '\n'
+		<< "Total Amount: " << getTotalAmount() << '\n'
+		<< "Number of Withdrawals: " << getNbDeposits() << '\n';
 }
