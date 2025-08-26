@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:14:31 by htrindad          #+#    #+#             */
-/*   Updated: 2025/05/12 18:19:20 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/08/26 18:14:26 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 #include <iomanip>
 #include <stdint.h>
 #include <cstdlib>
-
-#ifndef DEBUG
-# define DEBUG 0
-#endif
-
 
 class Contact
 {
