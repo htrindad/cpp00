@@ -6,13 +6,14 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 17:54:39 by htrindad          #+#    #+#             */
-/*   Updated: 2025/08/27 16:51:45 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/08/27 18:16:12 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <ctime>
 #include <iostream>
+#include <iomanip>
 
 // CnD
 int	Account::_nbAccounts = 0;
@@ -117,8 +118,11 @@ void Account::_displayTimestamp()
 
 	time.tm_year += 1900;
 	std::cout
-		<< '[' << time.tm_year << time.tm_mon << time.tm_mday << '_'
-		<< time.tm_hour << time.tm_min << time.tm_sec << "] ";
+		<< '[' << std::setfill('0') << std::setw(2) << time.tm_year
+		<< std::setfill('0') << std::setw(2) << time.tm_mon
+		<< std::setfill('0') << std::setw(2) << time.tm_mday
+		<< '_' << std::setfill('0') << std::setw(2) << time.tm_hour
+		<< std::setfill('0') << std::setw(2) << time.tm_min << time.tm_sec << "] ";
 }
 
 void Account::displayAccountsInfos()

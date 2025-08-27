@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 17:29:35 by htrindad          #+#    #+#             */
-/*   Updated: 2025/08/27 17:22:46 by htrindad         ###   ########.fr       */
+/*   Updated: 2025/08/27 18:05:43 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int main()
 		if (std::cin.eof())
 		{
 			std::cout << '\n';
-			exit(0);
+			return 1;
 		}
 		if (command.empty())
 		{
